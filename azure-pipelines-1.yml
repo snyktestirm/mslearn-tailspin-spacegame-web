@@ -1,4 +1,12 @@
 # ASP.NET Core (.NET Framework)
+- task: SnykSecurityScan@0
+  inputs:
+    serviceConnectionEndpoint: 'SnykService'
+    testType: 'app'
+    monitorOnBuild: true
+    failOnIssues: true
+    projectName: 'mslearn-tailspin-spacegame-web'
+    organization: '7befeae2-b290-4b90-bb66-8f6c5365ee9d'
 # Build and test ASP.NET Core projects targeting the full .NET Framework.
 # Add steps that publish symbols, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
